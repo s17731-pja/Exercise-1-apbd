@@ -14,6 +14,7 @@ namespace Exercise1
 
             if (result.IsSuccessStatusCode)
             {
+                string url = args.Length > 0 ? args[0] : "https://pja.edu.pl";
                 string html = await result.Content.ReadAsStringAsync();
                 var regex = new Regex("[a-z]+[a-z0-9]*@[a-z0-9]+\\.[a-z]+", RegexOptions.IgnoreCase);
 
